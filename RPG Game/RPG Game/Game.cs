@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace RPG_Game
 {
-    public class Game
+    public class Game : ShowPlayersInterface
     {
-        List<Champion> champions = new List<Champion>();
+        public static List<Champion> champions = new List<Champion>();
         public void Start()
         {
             Console.WriteLine("How many players are?");
@@ -69,14 +70,21 @@ namespace RPG_Game
                     champions.Add(shaman);
                 }
             }
+            
             Console.WriteLine("Player list: ");
             ShowPlayers();
 
-            Console.WriteLine("The fight has begun!");
+            Console.WriteLine("\nThe fight has begun!");
+            Fight fight = new Fight();
 
-            Fight.Battle(champions);
+            fight.Battle(champions);
         }
-        public void ShowPlayers()
+
+        public interface ShowPlayersInterface
+        {
+            public void ShowPlayers();
+        }
+        public void ShowPlayers() 
         {
             int i = 0;
             foreach (var champion in champions)
