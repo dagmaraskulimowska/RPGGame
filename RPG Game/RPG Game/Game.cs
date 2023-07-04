@@ -49,28 +49,32 @@ namespace RPG_Game
 
                 if (className == "Warrior")
                 {
-                    Warrior warrior = new Warrior(name, className, RandomNumber(15), RandomNumber(3));
+                    Warrior warrior = new Warrior(name, className, RandomHealth(15), RandomAttack(3));
                     champions.Add(warrior);
 
                 }
                 else if (className == "Mage")
                 {
-                    Mage mage = new Mage(name, className, RandomNumber(13), RandomNumber(4));
+                    Mage mage = new Mage(name, className, RandomHealth(13), RandomAttack(4));
                     champions.Add(mage);
                 }
                 else if (className == "Archer")
                 {
-                    Archer archer = new Archer(name, className, RandomNumber(9), RandomNumber(5));
+                    Archer archer = new Archer(name, className, RandomHealth(9), RandomAttack(5));
                     champions.Add(archer);
                 }
                 else if (className == "Shaman")
                 {
-                    Shaman shaman = new Shaman(name, className, RandomNumber(11), RandomNumber(4));
+                    Shaman shaman = new Shaman(name, className, RandomHealth(11), RandomAttack(4));
                     champions.Add(shaman);
                 }
             }
             Console.WriteLine("Player list: ");
             ShowPlayers();
+
+            Console.WriteLine("The fight has begun!");
+
+            Fight.Battle(champions);
         }
         public void ShowPlayers()
         {
@@ -82,11 +86,18 @@ namespace RPG_Game
             }
         }
 
-        public int RandomNumber(int max)
+        public int RandomHealth(int maxHealth)
         {
             Random random = new Random();
-            int number = random.Next(0, max + 1);
-            return number;
+            int health = random.Next(8, maxHealth + 1);
+            return health;
+        }
+
+        public int RandomAttack(int maxAttack)
+        {
+            Random random = new Random();
+            int attack = random.Next(2, maxAttack + 1);
+            return attack;
         }
     }
 }
