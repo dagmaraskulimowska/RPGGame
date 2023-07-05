@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPG_Game
 {
-    internal interface ShowPlayersInterface
+    internal interface IShowPlayers
     {
         public void ShowPlayers();
     }

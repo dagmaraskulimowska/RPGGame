@@ -12,5 +12,19 @@ namespace RPG_Game
         {
     
         }  
+
+        public void MortalStrike()
+        {
+
+        }
+
+        public void StormWall()
+        {
+
+        }
+        public void StormOfSwords()
+        {
+
+        }
     }
 }

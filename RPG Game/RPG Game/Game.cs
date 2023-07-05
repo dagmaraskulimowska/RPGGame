@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RPG_Game
 {
-    public class Game : ShowPlayersInterface
+    public class Game : IShowPlayers
     {
         public static List<Champion> champions = new List<Champion>();
         public void Start()

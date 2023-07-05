@@ -39,12 +39,8 @@ namespace RPG_Game
                 }
             }
             winners.Reverse();
-            Console.WriteLine("\nWinners: ");
-        
-            foreach (var winner in winners)
-            {
-                    Console.WriteLine("Player " + winner.name + " won!");
-            }
+            Console.WriteLine("\nWinner: ");
+            Console.WriteLine("Player " + winners[0].name + " won!");
         }
         public interface ShowPlayersInterface
         {

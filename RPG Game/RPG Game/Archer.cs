@@ -12,5 +12,20 @@ namespace RPG_Game
         {
 
         }
+
+        public void BlazingArrow()
+        {
+
+        }
+
+        public void FrostArrow()
+        {
+
+        }
+
+        public void ThunderShock()
+        {
+
+        }
     }
 }

@@ -12,5 +12,20 @@ namespace RPG_Game
         {
 
         }
+
+        public void LightningLasso()
+        {
+
+        }
+
+        public void EarthShock()
+        {
+
+        }
+
+        public void ElementalBlast()
+        {
+
+        }
     }
 }

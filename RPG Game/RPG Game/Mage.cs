@@ -12,5 +12,20 @@ namespace RPG_Game
         {
 
         }
+
+        public void Meteor()
+        {
+
+        }
+
+        public void PhoenixFlames()
+        {
+
+        }
+
+        public void BrainFreeze()
+        {
+
+        }
     }
 }
