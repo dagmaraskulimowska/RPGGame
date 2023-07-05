@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RPG_Game
+namespace RPG_Game.Champions
 {
     public class Warrior : Champion
     {
         static Random random = new Random();
-        public Warrior(string Name, string ClassName, int Health, int Attack) : base(Name, ClassName, Health, Attack) 
+        public Warrior(string Name, string ClassName, int Health, int Attack) : base(Name, ClassName, Health, Attack)
         {
-    
+
         }
 
         public static void MortalStrike(Champion champion)

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RPG_Game
+namespace RPG_Game.Champions
 {
     public class Archer : Champion
     {
@@ -22,7 +22,7 @@ namespace RPG_Game
                 champion.attack += 4;
                 Console.WriteLine($"Champion {champion.name} used a Blazing arrow!");
             }
-           
+
         }
 
         public static void FrostArrow(Champion champion)
