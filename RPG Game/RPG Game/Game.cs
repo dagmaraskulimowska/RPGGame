@@ -53,7 +53,7 @@ namespace RPG_Game
                         break;
                 }
             }
-            
+
             Console.WriteLine("Player list: ");
             ShowPlayers();
 
@@ -63,7 +63,7 @@ namespace RPG_Game
             fight.Battle(champions);
         }
 
-        public void ShowPlayers() 
+        public void ShowPlayers()
         {
             int i = 0;
             foreach (var champion in champions)
