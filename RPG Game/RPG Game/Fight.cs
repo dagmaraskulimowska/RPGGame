@@ -72,8 +72,11 @@ namespace RPG_Game
                 }
             }
             winners.Reverse();
-            Console.WriteLine("Winner: ");
             Console.WriteLine($"Player {winners[0].name} won!");
+
+            if(winners.Count > 1) { 
+            Console.WriteLine($"Second place: {winners[1].name}, third place: {winners[2].name}");
+              }
         }
 
         public void ShowPlayers()
