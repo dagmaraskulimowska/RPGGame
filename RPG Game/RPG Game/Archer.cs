@@ -15,7 +15,14 @@ namespace RPG_Game
 
         public static void BlazingArrow(Champion champion)
         {
-            champion.attack += 4;
+            Random random = new Random();
+
+            if (random.NextDouble() < 0.3)
+            {
+                champion.attack += 4;
+                Console.WriteLine($"Champion {champion.name} used a Blazing arrow!");
+            }
+           
         }
 
         public void FrostArrow()

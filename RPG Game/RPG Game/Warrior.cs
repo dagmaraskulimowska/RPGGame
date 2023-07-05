@@ -11,11 +11,17 @@ namespace RPG_Game
         public Warrior(string Name, string ClassName, int Health, int Attack) : base(Name, ClassName, Health, Attack) 
         {
     
-        }  
+        }
 
         public static void MortalStrike(Champion champion)
         {
-            champion.attack += 2;
+            Random random = new Random();
+
+            if (random.NextDouble() < 0.3)
+            {
+                champion.attack += 2;
+                Console.WriteLine($"Chamoion {champion.name} used a Mortal Strike!");
+            }
         }
 
         public void StormWall()

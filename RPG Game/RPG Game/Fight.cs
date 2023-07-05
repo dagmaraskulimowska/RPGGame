@@ -24,62 +24,26 @@ namespace RPG_Game
 
                         if ((champions[i].className == "Warrior") || (champions[j].className == "Warrior"))
                         {
-                            
-                            if (random.NextDouble() < 0.3)
-                            {
                                 Warrior.MortalStrike(champions[i]);
-                                Console.WriteLine($"Player {champions[i].name} used a Mortal Strike!");
-                            }
-                            else if (random.NextDouble() < 0.3)
-                            {
                                 Warrior.MortalStrike(champions[j]);
-                                Console.WriteLine($"Player {champions[j].name} used a Mortal Strike!");
-                            }
                         }
 
                         else if ((champions[i].className == "Mage") || (champions[j].className == "Mage"))
-                        {
-
-                            if (random.NextDouble() < 0.3)
-                            {
+                        {                   
                                 Mage.Meteor(champions[i]);
-                                Console.WriteLine($"Player {champions[i].name} used a Meteor!");
-                            }
-                            else if (random.NextDouble() < 0.3)
-                            {
-                                Mage.Meteor(champions[j]);
-                                Console.WriteLine($"Player {champions[j].name} used a Meteor!");
-                            }
+                                Mage.Meteor(champions[j]);                            
                         }
 
                         else if ((champions[i].className == "Shaman") || (champions[j].className == "Shaman"))
                         {
-
-                            if (random.NextDouble() < 0.3)
-                            {
                                 Shaman.LightningLasso(champions[i]);
-                                Console.WriteLine($"Player {champions[i].name} used a Lightning lasso!");
-                            }
-                            else if (random.NextDouble() < 0.3)
-                            {
                                 Shaman.LightningLasso(champions[j]);
-                                Console.WriteLine($"Player {champions[j].name} used a Lightning lasso!");
-                            }
                         }
 
                         else if ((champions[i].className == "Archer") || (champions[j].className == "Archer"))
                         {
-
-                            if (random.NextDouble() < 0.3)
-                            {
                                 Archer.BlazingArrow(champions[i]);
-                                Console.WriteLine($"Player {champions[i].name} used a Blazing arrow!");
-                            }
-                            else if (random.NextDouble() < 0.3)
-                            {
                                 Archer.BlazingArrow(champions[j]);
-                                Console.WriteLine($"Player {champions[j].name} used a Blazing arrow!");
-                            }
                         }
 
                         ShowPlayers();

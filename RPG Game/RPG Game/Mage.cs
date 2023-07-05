@@ -15,7 +15,13 @@ namespace RPG_Game
 
         public static void Meteor(Champion champion)
         {
-            champion.attack += 5;
+            Random random = new Random();
+
+            if (random.NextDouble() < 0.3)
+            {
+                champion.attack += 5;
+                Console.WriteLine($"Champion {champion.name} used a Meteor!");
+            }
         }
 
         public void PhoenixFlames()

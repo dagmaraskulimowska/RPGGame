@@ -15,7 +15,13 @@ namespace RPG_Game
 
         public static void LightningLasso(Champion champion)
         {
-            champion.health += 6;
+            Random random = new Random();
+
+            if (random.NextDouble() < 0.3)
+            {
+                champion.health += 6;
+                Console.WriteLine($"Champion {champion.name} used a Lightning lasso!");
+            }
         }
 
         public void EarthShock()
