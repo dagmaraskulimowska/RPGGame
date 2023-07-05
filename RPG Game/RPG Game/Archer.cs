@@ -13,9 +13,9 @@ namespace RPG_Game
 
         }
 
-        public void BlazingArrow()
+        public static void BlazingArrow(Champion champion)
         {
-
+            champion.attack += 4;
         }
 
         public void FrostArrow()

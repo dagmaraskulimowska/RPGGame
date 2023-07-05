@@ -8,6 +8,6 @@ namespace RPG_Game
 {
     internal interface IShowPlayers
     {
-        public void ShowPlayers();
+        void ShowPlayers();
     }
 }

@@ -13,9 +13,9 @@ namespace RPG_Game
 
         }
 
-        public void LightningLasso()
+        public static void LightningLasso(Champion champion)
         {
-
+            champion.health += 6;
         }
 
         public void EarthShock()

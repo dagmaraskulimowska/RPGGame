@@ -13,9 +13,9 @@ namespace RPG_Game
 
         }
 
-        public void Meteor()
+        public static void Meteor(Champion champion)
         {
-
+            champion.attack += 5;
         }
 
         public void PhoenixFlames()

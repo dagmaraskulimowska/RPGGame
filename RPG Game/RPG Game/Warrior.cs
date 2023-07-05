@@ -13,14 +13,14 @@ namespace RPG_Game
     
         }  
 
-        public void MortalStrike()
+        public static void MortalStrike(Champion champion)
         {
-
+            champion.attack += 2;
         }
 
         public void StormWall()
         {
-
+       
         }
         public void StormOfSwords()
         {
