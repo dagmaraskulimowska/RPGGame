@@ -17,19 +17,25 @@ namespace RPG_Game.Champions
 
         public static void Meteor(Champion champion)
         {
-            if (random.NextDouble() < 0.3)
+            if (champion.className == "Mage")
             {
-                champion.attack += 5;
-                Console.WriteLine($"Champion {champion.name} used a Meteor!");
+                if (random.NextDouble() < 0.3)
+                {
+                    champion.attack += 5;
+                    Console.WriteLine($"Champion {champion.name} used a Meteor!");
+                }
             }
         }
 
         public static void BrainFreeze(Champion champion)
         {
-            if (random.NextDouble() < 0.4)
+            if (champion.className == "Mage")
             {
-                champion.health += 5;
-                Console.WriteLine($"Champion {champion.name} used a Brain freeze!");
+                if (random.NextDouble() < 0.4)
+                {
+                    champion.health += 5;
+                    Console.WriteLine($"Champion {champion.name} used a Brain freeze!");
+                }
             }
         }
     }

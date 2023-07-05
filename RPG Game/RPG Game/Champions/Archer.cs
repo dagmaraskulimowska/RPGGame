@@ -17,20 +17,26 @@ namespace RPG_Game.Champions
 
         public static void BlazingArrow(Champion champion)
         {
-            if (random.NextDouble() < 0.3)
+            if (champion.className == "Archer")
             {
-                champion.attack += 4;
-                Console.WriteLine($"Champion {champion.name} used a Blazing arrow!");
+                if (random.NextDouble() < 0.3)
+                {
+                    champion.attack += 4;
+                    Console.WriteLine($"Champion {champion.name} used a Blazing arrow!");
+                }
             }
 
         }
 
         public static void FrostArrow(Champion champion)
         {
-            if (random.NextDouble() < 0.1)
+            if (champion.className == "Archer")
             {
-                champion.attack += 8;
-                Console.WriteLine($"Champion {champion.name} used a Frost Arrow!");
+                if (random.NextDouble() < 0.1)
+                {
+                    champion.attack += 8;
+                    Console.WriteLine($"Champion {champion.name} used a Frost Arrow!");
+                }
             }
         }
     }

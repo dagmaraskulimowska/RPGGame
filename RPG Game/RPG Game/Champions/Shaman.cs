@@ -17,19 +17,25 @@ namespace RPG_Game.Champions
 
         public static void LightningLasso(Champion champion)
         {
-            if (random.NextDouble() < 0.3)
+            if (champion.className == "Shaman")
             {
-                champion.health += 6;
-                Console.WriteLine($"Champion {champion.name} used a Lightning lasso!");
+                if (random.NextDouble() < 0.3)
+                {
+                    champion.health += 6;
+                    Console.WriteLine($"Champion {champion.name} used a Lightning lasso!");
+                }
             }
         }
 
         public static void EarthShock(Champion champion)
         {
-            if (random.NextDouble() < 0.5)
+            if (champion.className == "Shaman")
             {
-                champion.attack += 2;
-                Console.WriteLine($"Champion {champion.name} used a Earth shock!");
+                if (random.NextDouble() < 0.5)
+                {
+                    champion.attack += 2;
+                    Console.WriteLine($"Champion {champion.name} used a Earth shock!");
+                }
             }
         }
     }
