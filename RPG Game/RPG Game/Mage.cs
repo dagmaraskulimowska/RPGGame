@@ -8,6 +8,8 @@ namespace RPG_Game
 {
     public class Mage : Champion
     {
+        static Random random = new Random();
+
         public Mage(string Name, string ClassName, int Health, int Attack) : base(Name, ClassName, Health, Attack)
         {
 
@@ -15,8 +17,6 @@ namespace RPG_Game
 
         public static void Meteor(Champion champion)
         {
-            Random random = new Random();
-
             if (random.NextDouble() < 0.3)
             {
                 champion.attack += 5;
@@ -24,14 +24,13 @@ namespace RPG_Game
             }
         }
 
-        public void PhoenixFlames()
+        public static void BrainFreeze(Champion champion)
         {
-
-        }
-
-        public void BrainFreeze()
-        {
-
+            if (random.NextDouble() < 0.4)
+            {
+                champion.health += 5;
+                Console.WriteLine($"Champion {champion.name} used a Brain freeze!");
+            }
         }
     }
 }

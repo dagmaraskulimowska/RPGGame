@@ -26,24 +26,32 @@ namespace RPG_Game
                         {
                                 Warrior.MortalStrike(champions[i]);
                                 Warrior.MortalStrike(champions[j]);
+                                Warrior.StormWall(champions[i]);
+                                Warrior.StormWall(champions[j]);
                         }
 
                         else if ((champions[i].className == "Mage") || (champions[j].className == "Mage"))
                         {                   
                                 Mage.Meteor(champions[i]);
-                                Mage.Meteor(champions[j]);                            
+                                Mage.Meteor(champions[j]);
+                                Mage.BrainFreeze(champions[i]);
+                                Mage.BrainFreeze(champions[j]);
                         }
 
                         else if ((champions[i].className == "Shaman") || (champions[j].className == "Shaman"))
                         {
                                 Shaman.LightningLasso(champions[i]);
                                 Shaman.LightningLasso(champions[j]);
+                                Shaman.EarthShock(champions[i]);
+                                Shaman.EarthShock(champions[j]);
                         }
 
                         else if ((champions[i].className == "Archer") || (champions[j].className == "Archer"))
                         {
                                 Archer.BlazingArrow(champions[i]);
                                 Archer.BlazingArrow(champions[j]);
+                                Archer.FrostArrow(champions[i]);
+                                Archer.FrostArrow(champions[j]);
                         }
 
                         ShowPlayers();

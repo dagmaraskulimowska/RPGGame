@@ -8,6 +8,8 @@ namespace RPG_Game
 {
     public class Shaman : Champion
     {
+        static Random random = new Random();
+
         public Shaman(string Name, string ClassName, int Health, int Attack) : base(Name, ClassName, Health, Attack)
         {
 
@@ -15,8 +17,6 @@ namespace RPG_Game
 
         public static void LightningLasso(Champion champion)
         {
-            Random random = new Random();
-
             if (random.NextDouble() < 0.3)
             {
                 champion.health += 6;
@@ -24,14 +24,13 @@ namespace RPG_Game
             }
         }
 
-        public void EarthShock()
+        public static void EarthShock(Champion champion)
         {
-
-        }
-
-        public void ElementalBlast()
-        {
-
+            if (random.NextDouble() < 0.5)
+            {
+                champion.attack += 2;
+                Console.WriteLine($"Champion {champion.name} used a Earth shock!");
+            }
         }
     }
 }

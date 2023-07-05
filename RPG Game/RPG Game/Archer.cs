@@ -8,6 +8,8 @@ namespace RPG_Game
 {
     public class Archer : Champion
     {
+        static Random random = new Random();
+
         public Archer(string Name, string ClassName, int Health, int Attack) : base(Name, ClassName, Health, Attack)
         {
 
@@ -15,8 +17,6 @@ namespace RPG_Game
 
         public static void BlazingArrow(Champion champion)
         {
-            Random random = new Random();
-
             if (random.NextDouble() < 0.3)
             {
                 champion.attack += 4;
@@ -25,14 +25,13 @@ namespace RPG_Game
            
         }
 
-        public void FrostArrow()
+        public static void FrostArrow(Champion champion)
         {
-
-        }
-
-        public void ThunderShock()
-        {
-
+            if (random.NextDouble() < 0.1)
+            {
+                champion.attack += 8;
+                Console.WriteLine($"Champion {champion.name} used a Frost Arrow!");
+            }
         }
     }
 }
