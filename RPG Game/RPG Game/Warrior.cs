@@ -19,7 +19,7 @@ namespace RPG_Game
             if (random.NextDouble() < 0.5)
             {
                 champion.attack += 2;
-                Console.WriteLine($"Chamoion {champion.name} used a Mortal Strike!");
+                Console.WriteLine($"Champion {champion.name} used a Mortal Strike!");
             }
         }
 
@@ -28,7 +28,7 @@ namespace RPG_Game
             if (random.NextDouble() < 0.3)
             {
                 champion.health += 5;
-                Console.WriteLine($"Chamoion {champion.name} used a Storm wall!");
+                Console.WriteLine($"Champion {champion.name} used a Storm wall!");
             }
         }
     }
