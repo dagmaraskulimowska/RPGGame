@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPG_Game
 {
-    public class Fight : ShowPlayersInterface
+    public class Fight : IShowPlayers
     {
         public void Battle(List<Champion> champions)
         {
